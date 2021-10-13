@@ -15,7 +15,7 @@ featureAccessCollection = db.featureAccess # specify the collection
 @app.route('/feature',methods = ['POST'])
 def insert_data():
     """
-    This function is to update the 'enable' value given the email and the feature name. If there exist no such email and feature name, then a new data will be created to the database
+    This function is to update the 'enable' value given the email and the feature name. If there exist no such email and feature name, then new data will be created to the database
     """
     try:
 
@@ -40,7 +40,7 @@ def insert_data():
         return "", 200
 
     except Exception:
-        return "Http Status Not Modified", 304
+        return "", 304
 
 
 @app.route('/feature',methods = ['GET'])
